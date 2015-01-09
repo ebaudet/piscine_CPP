@@ -43,6 +43,7 @@ int main(void)
 	fragTrap.beRepaired(20);
 	fragTrap.notice();
 
+	std::cout << std::endl << std::endl << "**************** arrivee de scavTrap *************" << std::endl << std::endl;
 	ScavTrap scavTrap = ScavTrap("ScavTrap");
 
 	scavTrap.rangedAttack("Coucou");

@@ -6,7 +6,7 @@
 /*   By: ebaudet <ebaudet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/01/09 01:26:14 by ebaudet           #+#    #+#             */
-/*   Updated: 2015/01/09 01:51:59 by ebaudet          ###   ########.fr       */
+/*   Updated: 2015/01/09 01:56:03 by ebaudet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -109,7 +109,7 @@ void	ScavTrap::challengeNewcomer(std::string const & target) {
 	"Dress up as a duck and throw bread at people and say,'HOW DO YOU LIKE IT?!! HUH?!!!!'",
 	"Call Pizza Hut and ask them for domino's number."};
 
-	std::cout << *this << " challenge " << target << " to : " << std::endl << challenge[ScavTrap::random() % 3] << std::endl;
+	std::cout << *this << " challenge " << target << " to : " << std::endl << challenge[ScavTrap::random() % 20] << std::endl;
 }
 void	ScavTrap::notice() const {
 	std::cout << this->getName() << " a " << this->getHitPoints() << "/";
