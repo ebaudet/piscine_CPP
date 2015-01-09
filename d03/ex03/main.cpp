@@ -12,6 +12,8 @@
 
 #include "FragTrap.hpp"
 #include "ScavTrap.hpp"
+#include "NinjaTrap.hpp"
+#include "ClapTrap.hpp"
 
 int main(void)
 {
@@ -71,6 +73,17 @@ int main(void)
 
 	scavTrap.beRepaired(20);
 	scavTrap.notice();
+
+	std::cout << std::endl << std::endl << "**************** arrivee de ClapTrap *************" << std::endl << std::endl;
+	ClapTrap clapTrap = ClapTrap("ClapTrap");
+
+	std::cout << std::endl << std::endl << "**************** arrivee de NinjaTrap *************" << std::endl << std::endl;
+	NinjaTrap ninjaTrap = NinjaTrap("NinjaTrap");
+	ninjaTrap.ninjaShoebox(scavTrap);
+	ninjaTrap.ninjaShoebox(fragTrap);
+	ninjaTrap.ninjaShoebox(ninjaTrap);
+	ninjaTrap.ninjaShoebox(clapTrap);
+
 
 	return 0;
 }
