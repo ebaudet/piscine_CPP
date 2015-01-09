@@ -6,7 +6,7 @@
 /*   By: ebaudet <ebaudet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/01/09 01:26:14 by ebaudet           #+#    #+#             */
-/*   Updated: 2015/01/09 01:56:03 by ebaudet          ###   ########.fr       */
+/*   Updated: 2015/01/09 03:44:06 by ebaudet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,14 +41,14 @@ ScavTrap::~ScavTrap(void) {
 
 /* Methodes */
 void	ScavTrap::rangedAttack(std::string const & target) const {
-	std::cout << "FR4G-TP " << this->_name << " attacks " << target;
+	std::cout << "FR4G-TP. The ScavTrap " << this->_name << " attacks " << target;
 	std::cout << " at range, causing " << this->_rangedAttackDamage;
 	std::cout << " points of damage !" << std::endl;
 
 	return ;
 }
 void	ScavTrap::meleeAttack(std::string const & target) const {
-	std::cout << "FR4G-TP " << this->_name << " attacks " << target;
+	std::cout << "FR4G-TP. The ScavTrap " << this->_name << " attacks " << target;
 	std::cout << " with melee attack, causing " << this->_meleeAttackDamage;
 	std::cout << " points of damage !" << std::endl;
 	return ;
