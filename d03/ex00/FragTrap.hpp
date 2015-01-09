@@ -18,6 +18,9 @@
 class FragTrap {
 
 private:
+	FragTrap(void);
+
+protected:
 	std::string		_name;
 	unsigned int	_hitPoints;
 	unsigned int	_maxHitPoints;
@@ -27,11 +30,10 @@ private:
 	unsigned int	_meleeAttackDamage;
 	unsigned int	_rangedAttackDamage;
 	unsigned int	_armorDamageReduction;
-	static int		random();
 	static bool		_rand;
+	static int		random();
 
 public:
-	FragTrap(void);
 	FragTrap(const FragTrap &src);
 	FragTrap(std::string name);
 	~FragTrap(void);
@@ -43,7 +45,6 @@ public:
 	void	beRepaired(unsigned int amount);
 	void	notice() const;
 	void	vaulthunter_dot_exe(std::string const & target);
-	
 
 	/* Accessors */
 	unsigned int	getHitPoints(void) const;
