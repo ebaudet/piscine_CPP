@@ -6,7 +6,7 @@
 /*   By: ebaudet <ebaudet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/01/08 18:28:22 by ebaudet           #+#    #+#             */
-/*   Updated: 2015/01/09 03:46:10 by ebaudet          ###   ########.fr       */
+/*   Updated: 2015/01/09 05:48:54 by ebaudet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,8 @@
 
 class FragTrap : public ClapTrap {
 
-private:
-	FragTrap(void);
-
 public:
+	FragTrap(void);
 	FragTrap(const FragTrap &src);
 	FragTrap(std::string name);
 	~FragTrap(void);

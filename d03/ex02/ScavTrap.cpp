@@ -6,7 +6,7 @@
 /*   By: ebaudet <ebaudet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/01/09 01:26:14 by ebaudet           #+#    #+#             */
-/*   Updated: 2015/01/09 03:45:12 by ebaudet          ###   ########.fr       */
+/*   Updated: 2015/01/09 05:46:54 by ebaudet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 #include <cstdlib>
 
 /* CORE */
-ScavTrap::ScavTrap(void) : ClapTrap() {
+ScavTrap::ScavTrap(void) : ClapTrap("no_name", 100, 100, 50, 100, 1, 20, 15, 3) {
 	std::cout << "Hey !! It's me, ScavTrap !" << std::endl;
 
 	return ;

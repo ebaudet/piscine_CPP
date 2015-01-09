@@ -15,7 +15,11 @@
 #include <cstdlib>
 
 /* CORE */
-FragTrap::FragTrap(void) {
+FragTrap::FragTrap(void) : _name("no_name"), _hitPoints(100), _maxHitPoints(100),
+									   _energyPoints(100), _maxEnergyPoints(100), _level(1),
+									   _meleeAttackDamage(30), _rangedAttackDamage(20),
+									   _armorDamageReduction(5)
+									   {
 	std::cout << "Hey !! It's me, Mario !" << std::endl;
 
 	return ;

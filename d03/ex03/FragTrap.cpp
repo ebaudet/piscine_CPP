@@ -6,7 +6,7 @@
 /*   By: ebaudet <ebaudet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/01/08 18:27:40 by ebaudet           #+#    #+#             */
-/*   Updated: 2015/01/09 03:45:37 by ebaudet          ###   ########.fr       */
+/*   Updated: 2015/01/09 05:48:39 by ebaudet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 #include <cstdlib>
 
 /* CORE */
-FragTrap::FragTrap(void) : ClapTrap() {
+FragTrap::FragTrap(void) : ClapTrap("no_name", 100, 100, 100, 100, 1, 30, 20, 5) {
 	std::cout << "Hey !! It's me, Mario !" << std::endl;
 
 	return ;

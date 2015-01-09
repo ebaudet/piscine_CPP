@@ -6,7 +6,7 @@
 /*   By: ebaudet <ebaudet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/01/09 02:12:07 by ebaudet           #+#    #+#             */
-/*   Updated: 2015/01/09 02:41:16 by ebaudet          ###   ########.fr       */
+/*   Updated: 2015/01/09 05:45:54 by ebaudet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,13 +30,13 @@ protected:
 	unsigned int	_armorDamageReduction;
 	static bool		_rand;
 	static int		random();
-	ClapTrap(void);
 	ClapTrap(std::string name,
 		unsigned int hitPoints, unsigned int maxHitPoints, unsigned int energyPoints,
 		unsigned int maxEnergyPoints, unsigned int level, unsigned int meleeAttackDamage,
 		unsigned int rangedAttackDamage, unsigned int armorDamageReduction);
 
 public:
+	ClapTrap(void);
 	ClapTrap(const ClapTrap &src);
 	ClapTrap(std::string name);
 	~ClapTrap(void);

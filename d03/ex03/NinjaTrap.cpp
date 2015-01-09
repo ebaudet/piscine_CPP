@@ -6,7 +6,7 @@
 /*   By: ebaudet <ebaudet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/01/09 03:58:56 by ebaudet           #+#    #+#             */
-/*   Updated: 2015/01/09 04:14:24 by ebaudet          ###   ########.fr       */
+/*   Updated: 2015/01/09 05:49:12 by ebaudet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 #include <cstdlib>
 
 /* CORE */
-NinjaTrap::NinjaTrap(void) : ClapTrap() {
+NinjaTrap::NinjaTrap(void) : ClapTrap("no_name", 60, 60, 120, 120, 1, 60, 5, 0) {
 	std::cout << "Hey !! It's me, Mario the ninja !" << std::endl;
 
 	return ;

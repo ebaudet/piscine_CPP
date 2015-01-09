@@ -6,7 +6,7 @@
 /*   By: ebaudet <ebaudet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/01/09 01:26:14 by ebaudet           #+#    #+#             */
-/*   Updated: 2015/01/09 03:44:06 by ebaudet          ###   ########.fr       */
+/*   Updated: 2015/01/09 05:44:52 by ebaudet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,11 @@
 #include <cstdlib>
 
 /* CORE */
-ScavTrap::ScavTrap(void) {
+ScavTrap::ScavTrap(void) : _name("no_name"), _hitPoints(100), _maxHitPoints(100),
+							_energyPoints(50), _maxEnergyPoints(100), _level(1),
+							_meleeAttackDamage(20), _rangedAttackDamage(15),
+							_armorDamageReduction(3)
+{
 	std::cout << "Hey !! It's me, ScavTrap !" << std::endl;
 
 	return ;

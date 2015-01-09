@@ -6,7 +6,7 @@
 /*   By: ebaudet <ebaudet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/01/09 01:26:14 by ebaudet           #+#    #+#             */
-/*   Updated: 2015/01/09 03:45:08 by ebaudet          ###   ########.fr       */
+/*   Updated: 2015/01/09 05:49:48 by ebaudet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,8 @@
 
 class ScavTrap : public ClapTrap {
 
-private:
-	ScavTrap(void);
-
 public:
+	ScavTrap(void);
 	ScavTrap(const ScavTrap &src);
 	ScavTrap(std::string name);
 	~ScavTrap(void);

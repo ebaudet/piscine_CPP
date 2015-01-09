@@ -6,7 +6,7 @@
 /*   By: ebaudet <ebaudet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/01/09 01:26:14 by ebaudet           #+#    #+#             */
-/*   Updated: 2015/01/09 01:48:50 by ebaudet          ###   ########.fr       */
+/*   Updated: 2015/01/09 05:45:05 by ebaudet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,6 @@
 # include <iostream>
 
 class ScavTrap {
-
-private:
-	ScavTrap(void);
 
 protected:
 	std::string		_name;
@@ -34,6 +31,7 @@ protected:
 	static int		random();
 
 public:
+	ScavTrap(void);
 	ScavTrap(const ScavTrap &src);
 	ScavTrap(std::string name);
 	~ScavTrap(void);

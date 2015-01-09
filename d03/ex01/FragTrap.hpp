@@ -6,7 +6,7 @@
 /*   By: ebaudet <ebaudet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/01/08 18:28:22 by ebaudet           #+#    #+#             */
-/*   Updated: 2015/01/09 01:30:10 by ebaudet          ###   ########.fr       */
+/*   Updated: 2015/01/09 05:44:11 by ebaudet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,6 @@
 # include <iostream>
 
 class FragTrap {
-
-private:
-	FragTrap(void);
 
 protected:
 	std::string		_name;
@@ -34,6 +31,7 @@ protected:
 	static int		random();
 
 public:
+	FragTrap(void);
 	FragTrap(const FragTrap &src);
 	FragTrap(std::string name);
 	~FragTrap(void);

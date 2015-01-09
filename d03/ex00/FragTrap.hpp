@@ -17,9 +17,6 @@
 
 class FragTrap {
 
-private:
-	FragTrap(void);
-
 protected:
 	std::string		_name;
 	unsigned int	_hitPoints;
@@ -34,6 +31,7 @@ protected:
 	static int		random();
 
 public:
+	FragTrap(void);
 	FragTrap(const FragTrap &src);
 	FragTrap(std::string name);
 	~FragTrap(void);

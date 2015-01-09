@@ -6,7 +6,7 @@
 /*   By: ebaudet <ebaudet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/01/09 03:58:56 by ebaudet           #+#    #+#             */
-/*   Updated: 2015/01/09 04:11:45 by ebaudet          ###   ########.fr       */
+/*   Updated: 2015/01/09 05:49:20 by ebaudet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,8 @@
 
 class NinjaTrap : public ClapTrap {
 
-private:
-	NinjaTrap(void);
-
 public:
+	NinjaTrap(void);
 	NinjaTrap(const NinjaTrap &src);
 	NinjaTrap(std::string name);
 	~NinjaTrap(void);

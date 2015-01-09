@@ -6,7 +6,7 @@
 /*   By: ebaudet <ebaudet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/01/09 02:12:07 by ebaudet           #+#    #+#             */
-/*   Updated: 2015/01/09 02:24:57 by ebaudet          ###   ########.fr       */
+/*   Updated: 2015/01/09 05:45:34 by ebaudet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,11 @@
 #include <cstdlib>
 
 /* CORE */
-ClapTrap::ClapTrap(void) {
+ClapTrap::ClapTrap(void) : _name("no_name"), _hitPoints(100), _maxHitPoints(100),
+									   _energyPoints(100), _maxEnergyPoints(100), _level(1),
+									   _meleeAttackDamage(30), _rangedAttackDamage(20),
+									   _armorDamageReduction(5)
+{
 	std::cout << "Hey !! It's me, ClapTrap !" << std::endl;
 
 	return ;
