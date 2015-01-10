@@ -6,7 +6,7 @@
 /*   By: ebaudet <ebaudet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/01/10 02:38:30 by ebaudet           #+#    #+#             */
-/*   Updated: 2015/01/10 04:18:18 by ebaudet          ###   ########.fr       */
+/*   Updated: 2015/01/10 04:31:01 by ebaudet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ protected:
 public:
 	Victim(const Victim &src);
 	Victim(std::string name);
-	~Victim(void);
+	virtual ~Victim(void);
 
 	/* Method */
 	virtual void	getPolymorphed() const;

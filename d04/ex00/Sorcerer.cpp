@@ -6,7 +6,7 @@
 /*   By: ebaudet <ebaudet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/01/10 02:38:30 by ebaudet           #+#    #+#             */
-/*   Updated: 2015/01/10 04:15:54 by ebaudet          ###   ########.fr       */
+/*   Updated: 2015/01/10 04:25:49 by ebaudet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ Sorcerer::Sorcerer(Sorcerer const &src) {
 	*this = src;
 	return ;
 }
-Sorcerer::Sorcerer(std::string name, std::string title) : _name(name), _title(title) 
+Sorcerer::Sorcerer(std::string name, std::string title) : _name(name), _title(title)
 {
 	std::cout << this->getName() << ", " << this->getTitle() << ", is born !" << std::endl;
 	return ;
