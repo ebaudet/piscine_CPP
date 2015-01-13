@@ -6,38 +6,33 @@
 /*   By: ebaudet <ebaudet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/01/12 17:47:43 by ebaudet           #+#    #+#             */
-/*   Updated: 2015/01/13 06:57:07 by ebaudet          ###   ########.fr       */
+/*   Updated: 2015/01/13 06:49:02 by ebaudet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include "Bureaucrat.hpp"
 #include "Form.hpp"
-#include "PresidentialPardonForm.hpp"
-#include "RobotomyRequestForm.hpp"
-#include "ShrubberyCreationForm.hpp"
+#include "Bureaucrat.hpp"
+#include "Intern.hpp"
+#include <iostream>
 
-int 	main()
-{
-	Bureaucrat	buretin("buretin tintamarre rabou de la ficelle", 140);
-	Form *		form;
-	int			i;
+int	main() {
+	Form *			form;
+	Intern			bob;
+	Bureaucrat		buretin("buretin", 1);
 
-	form = new ShrubberyCreationForm("Fraise");
-	buretin.executeForm(*form);
+	form = bob.makeForm("Il etait une fois la Form", "Chocapics");
+	std::cout << buretin << std::endl;
+	form = bob.makeForm("presidential pardon", "Douglas Adams");
 	buretin.signForm(*form);
-	buretin.executeForm(*form);
-	buretin.setGrade(1);
 	buretin.executeForm(*form);
 	delete form;
 
-	form = new RobotomyRequestForm("Pere castor");
+	form = bob.makeForm("robotomy request", "Cyril Hanouna");
 	buretin.signForm(*form);
-	for (i=0; i < 10; i++)
-		buretin.executeForm(*form);
+	buretin.executeForm(*form);
 	delete form;
 
-	form = new PresidentialPardonForm("Sirop de Menthe");
+	form = bob.makeForm("shrubbery creation", "JCVD");
 	buretin.signForm(*form);
 	buretin.executeForm(*form);
 	delete form;

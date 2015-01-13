@@ -6,7 +6,7 @@
 /*   By: ebaudet <ebaudet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/01/13 03:49:46 by ebaudet           #+#    #+#             */
-/*   Updated: 2015/01/13 06:15:49 by ebaudet          ###   ########.fr       */
+/*   Updated: 2015/01/13 06:54:59 by ebaudet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ void		PresidentialPardonForm::execute(Bureaucrat const& executor) const {
 	try {
 		executor.canExecute(*this);
 		std::cout << executor.getName() << " executes " << this->_name << "." << std::endl;
-		std::cout << "Zafod Beeblebrox, president of the Universe, officialy forgives " << this->_target << "." << std::endl;
+		std::cout << "Zafod Beeblebrox, president de l'Univers (Et peut etre bien moins) pardonne " << this->_target << " et te propose une glace a la fraise. Ou un chevreuil." << std::endl;
 
 	} catch (Form::GradeTooLowException &e) {
 		std::cout << *this << " cannot make execution " << std::endl;
