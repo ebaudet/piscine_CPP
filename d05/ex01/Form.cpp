@@ -6,7 +6,7 @@
 /*   By: ebaudet <ebaudet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/01/12 21:58:36 by ebaudet           #+#    #+#             */
-/*   Updated: 2015/01/12 23:32:52 by ebaudet          ###   ########.fr       */
+/*   Updated: 2015/01/13 03:08:58 by ebaudet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,19 @@
 Form::Form() : _name("no_name"), _gradeToSign(150), _gradeToExecute(1) {
 	return ;
 }
+Form::Form(std::string const name, int const gradeToSign, int const gradeToExecute):
+	_name(name), _gradeToSign(gradeToSign), _gradeToExecute(gradeToExecute)
+{
+	if (this->_gradeToSign > 150 || this->_gradeToExecute > 150)
+		throw Form::GradeTooLowException();
+	if (this->_gradeToSign < 1 || this->_gradeToExecute < 1)
+		throw Form::GradeTooHighException();
+	this->_sign = false;
+	return ;
+}
 Form::Form(Form const &instance) : _name(instance.getName()), _gradeToSign(instance.getGradeToSign()), _gradeToExecute(instance.getGradeToExecute())
 {
-	this->_sign = true;
+	this->_sign = false;
 	return ;
 }
 Form& Form::operator=(Form const &rhs) {
@@ -31,6 +41,18 @@ Form::~Form() {
 	return ;
 }
 
+/***********************************************
+	member functions
+************************************************/
+void		Form::beSigned(Bureaucrat &bureaucrat) {
+	if (bureaucrat.getGrade() > this->_gradeToSign)
+		throw Form::GradeTooLowException();
+	this->_sign = true;
+}
+
+/***********************************************
+	accessors & mutators
+************************************************/
 int			Form::getGradeToSign(void) const {
 	return this->_gradeToSign;
 }
@@ -45,8 +67,15 @@ bool		Form::getSign(void) const {
 }
 bool		Form::setSign(bool sign) {
 	this->_sign = sign;
-
 	return true;
+}
+
+/***********************************************
+	Overload operator
+************************************************/
+std::ostream &operator<<(std::ostream &o, const Form& rhs) {
+	o << rhs.getName() << ", form grade " << rhs.getGradeToSign() << ".";
+	return o;
 }
 
 /***********************************************
@@ -92,8 +121,3 @@ const  char* Form::GradeTooLowException::what() const throw() {
 	return ("Exeption Form::GradeTooLowException");
 }
 
-// Overload operator <<
-std::ostream &operator<<(std::ostream &o, const Form& rhs) {
-	o << rhs.getName() << ", form grade " << rhs.getGradeToSign() << ".";
-	return o;
-}

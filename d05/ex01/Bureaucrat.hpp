@@ -6,7 +6,7 @@
 /*   By: ebaudet <ebaudet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/01/12 17:47:43 by ebaudet           #+#    #+#             */
-/*   Updated: 2015/01/12 23:30:05 by ebaudet          ###   ########.fr       */
+/*   Updated: 2015/01/13 03:08:15 by ebaudet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 # define BUREAUCRAT_HPP
 
 #include <iostream>
+#include "Form.hpp"
+class Form;
 
 class Bureaucrat
 {
@@ -28,10 +30,13 @@ public:
 	Bureaucrat& operator=(Bureaucrat const &);
 	~Bureaucrat();
 
+	// accessors & mutators
 	bool		setGrade(int grade);
 	int			getGrade(void) const;
 	std::string	getName(void) const;
 
+	// member functions
+	void		signForm(Form &);
 
 	class GradeTooHighException : public std::exception
 	{
