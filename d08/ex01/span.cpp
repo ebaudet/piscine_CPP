@@ -6,7 +6,7 @@
 /*   By: ebaudet <ebaudet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/01/15 21:44:26 by ebaudet           #+#    #+#             */
-/*   Updated: 2015/01/16 01:09:10 by ebaudet          ###   ########.fr       */
+/*   Updated: 2015/01/16 01:32:41 by ebaudet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,7 +93,7 @@ int		Span::longestSpan(void) {
 /***********************************************
 	private functions
 ************************************************/
-int				Span::abs_diff(int const a, int const b) {
+int		Span::abs_diff(int const a, int const b) {
 	int		result;
 
 	result = b - a;
