@@ -6,7 +6,7 @@
 /*   By: ebaudet <ebaudet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/01/16 01:24:23 by ebaudet           #+#    #+#             */
-/*   Updated: 2015/01/16 02:24:05 by ebaudet          ###   ########.fr       */
+/*   Updated: 2015/01/16 03:19:30 by ebaudet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,23 +27,27 @@ public:
 	class iterator : public std::iterator<std::input_iterator_tag, int>
 	{
 	private:
-		int		*p;
+		iterator& operator=(iterator const &);
 
 	public:
+		int		*p;
+
+		// Constructors & Destructors
 		iterator(void);
-		iterator(int* x);
+		iterator(int *);
 		iterator(iterator const &);
-		iterator& operator=(iterator const &);
 		~iterator(void);
 
-		// overloar operators
+		// overload operators
 		iterator&	operator++(void);
 		iterator	operator++(int);
+		iterator&	operator--(void);
+		iterator	operator--(int);
 		bool		operator==(const iterator& rhs);
 		bool		operator!=(const iterator& rhs);
 		int&		operator*(void);
 	};
-	
+
 	iterator	begin(void);
 	iterator	end(void);
 };
