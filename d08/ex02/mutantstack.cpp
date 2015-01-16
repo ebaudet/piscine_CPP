@@ -6,7 +6,7 @@
 /*   By: ebaudet <ebaudet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/01/16 01:24:23 by ebaudet           #+#    #+#             */
-/*   Updated: 2015/01/16 03:34:07 by ebaudet          ###   ########.fr       */
+/*   Updated: 2015/01/16 03:47:04 by ebaudet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ MutantStack<T>::~MutantStack() {
 	Constructors // Destructors pour MutantStack::iterator
 ************************************************/
 template<typename T>
-MutantStack<T>::iterator::iterator(void) : std::iterator<std::input_iterator_tag, int>() {
+MutantStack<T>::iterator::iterator(void) : std::iterator<std::input_iterator_tag, T>() {
 	return ;
 }
 template<typename T>

@@ -6,7 +6,7 @@
 /*   By: ebaudet <ebaudet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/01/16 01:24:23 by ebaudet           #+#    #+#             */
-/*   Updated: 2015/01/16 03:19:30 by ebaudet          ###   ########.fr       */
+/*   Updated: 2015/01/16 03:47:15 by ebaudet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ public:
 	MutantStack<T>& operator=(MutantStack<T> const &);
 	~MutantStack<T>(void);
 	
-	class iterator : public std::iterator<std::input_iterator_tag, int>
+	class iterator : public std::iterator<std::input_iterator_tag, T>
 	{
 	private:
 		iterator& operator=(iterator const &);
